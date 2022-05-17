@@ -16,7 +16,7 @@ class Filme {
     var descricao: String
     var maiorDeIdade: Bool
  
-    init(imagem: UIImage?, nome: String, ano: Int, descricao: String, maiorDeIdade: Bool = false) {
+    init(imagem: UIImage?, nome: String, ano: Int, descricao: String, maiorDeIdade: Bool) {
         self.imagem = imagem
         self.nome =  nome
         self.ano = ano
