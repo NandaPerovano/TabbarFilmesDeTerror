@@ -8,17 +8,18 @@
 import UIKit
 
 class FiltroViewController: UIViewController {
-
+    
     @IBOutlet weak var maioridadeSegmentedControl: UISegmentedControl!
     @IBOutlet weak var filtroCollectionView: UICollectionView!
     
-    var filmesMaioridade:[Filme] = [
-        Filme(imagem: UIImage(named: "panicoImagem"), nome: "Pânico", ano: 1996, descricao: "Sidney relaciona a morte de dois estudantes com a de sua mãe, há cerca de um ano, por um maníaco na cidade"),
+    var listaFilmesFiltro:[Filme] = []
+    var listaFilmes:[Filme] = [
+        Filme(imagem: UIImage(named: "panicoImagem"), nome: "Pânico", ano: 1996, descricao: "Sidney relaciona a morte de dois estudantes com a de sua mãe, há cerca de um ano, por um maníaco na cidade", maiorDeIdade: true),
         Filme(imagem: UIImage(named: "sextaFeiraImagem"), nome: "Sexta Feira 13", ano: 1980, descricao: "Um assassiono mata dois jovens em um acampamento. Após reaberto, monitores começam a desaparecer mortos por um maníaco"),
         Filme(imagem: UIImage(named: "oiluminadoImagem"), nome: "O Iluminado", ano: 1980, descricao: "Um ex-professor é contratado para cuidar de um Hotel por 5 meses com seu filho com poderes espirituais e sua esposa."),
-        Filme(imagem: UIImage(named: "jogosMortaisImagem"), nome: "Jogos Mortais", ano: 2004, descricao: "Dois caras trancados em um banheiro são obrigados a jogar por suas vidas"),
+        Filme(imagem: UIImage(named: "jogosMortaisImagem"), nome: "Jogos Mortais", ano: 2004, descricao: "Dois caras trancados em um banheiro são obrigados a jogar por suas vidas", maiorDeIdade: true),
         Filme(imagem: UIImage(named: "brinquedoAssassinoImagem"), nome: "Brinquedo Assassino", ano: 1988, descricao: "Um serial Killer antes de morrer utiliza vodu e transfere sua alma para um boneco"),
-        Filme(imagem: UIImage(named: "halloweenImagem"), nome: "Halloween", ano: 2018,descricao: "Michael Myers percegue na noite de Halloween sua irmã após 4 décadas internado"),
+        Filme(imagem: UIImage(named: "halloweenImagem"), nome: "Halloween", ano: 2018,descricao: "Michael Myers percegue na noite de Halloween sua irmã após 4 décadas internado", maiorDeIdade: true),
         Filme(imagem: UIImage(named: "psicoseImagem"), nome: "Psicose", ano: 1960, descricao: "Após uma secretária roubar uma imobiliária, durante a fuga se hospeda em um hotel adiministrado por um sujeito perigoso"),
         Filme(imagem: UIImage(named: "bruxaDeBlairImagem"), nome: "A Bruxa de Blair", ano: 1999, descricao: "Três estudantes fazem um documentário sobre a lenda da bruxa de Blair e desaparecem após um ano uma pista surge sobre seu macabro destino"),
         Filme(imagem: UIImage(named: "itImagem"), nome: "It: A coisa", ano: 2017, descricao: "Em 1989, criança começam a desaparecer na cidadezinha de Derry. Liberado por bill, um grupo de amigos investiga o caso e descobre uma ligação com o maligno palhaço Pennywise"),
@@ -34,21 +35,12 @@ class FiltroViewController: UIViewController {
         Filme(imagem: UIImage(named: "escolhaOuMorraImagem"), nome: "Escolha ou Morra", ano: 2022, descricao: "Uma estudante falida entra em uma jogo obscuro de computador"),
         Filme(imagem: UIImage(named: "escapeRoomImagem"), nome: "Escape Room", ano: 2019, descricao: "Seis estranhos são convidados para um experimento inusitado: trancados em uma sala enigmática")
     ]
-
-    var filmesMenoresDeDezoito:[String] = ["Escape Room", "A Babá", "Navio Fantasma", "O Silêncio dos Inocentes", "A Hora do Pesadelo", "A Freira", "O Chamado","It: A coisa", "A Bruxa de Blair", "Psicose", "Halloween","Brinquedo Assassino", "Jogos Mortais", "O Iluminado", "Pânico"]
-    
-    var filmesMaioresOuIgualDezoito:[String] = ["Escolha ou Morra", "massacreDaSerraEletricaImagem", "Doce Vingança", "A órfã", "Sexta Feira 13"]
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        listaFilmesFiltro = listaFilmes
         filtroCollectionView.dataSource = self
-        //filtroCollectionView.delegate = self
-      
-        
     }
     
     @IBAction func mudarFilmeMaioridadeAoclicarSegmented(_ sender: Any) {
@@ -56,31 +48,29 @@ class FiltroViewController: UIViewController {
         
         switch index {
         case 0 :
-            filmesMenoresDeDezoito
-           filtroCollectionView.reloadData()
+            listaFilmesFiltro = listaFilmes.filter { $0.maiorDeIdade }
         case 1:
-            filmesMaioresOuIgualDezoito
-           filtroCollectionView.reloadData()
+            listaFilmesFiltro = listaFilmes.filter { !$0.maiorDeIdade }
         default:
             break
         }
+        filtroCollectionView.reloadData()
     }
-    
 }
 
 
 extension FiltroViewController: UICollectionViewDataSource {
     
-func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    filmesMaioridade.count
-}
-
-func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    if let cell = filtroCollectionView.dequeueReusableCell(withReuseIdentifier: "cellFiltro", for: indexPath) as? FiltroCollectionViewCell {
-        let listaDeFilmes = filmesMaioridade[indexPath.row]
-        cell.customizarFiltro(imagem: listaDeFilmes.imagem, nome: listaDeFilmes.nome)
-        return cell
-}
-return UICollectionViewCell()
-}
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        listaFilmesFiltro.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = filtroCollectionView.dequeueReusableCell(withReuseIdentifier: "cellFiltro", for: indexPath) as? FiltroCollectionViewCell {
+            let listaDeFilmes = listaFilmesFiltro[indexPath.row]
+            cell.customizarFiltro(imagem: listaDeFilmes.imagem, nome: listaDeFilmes.nome)
+            return cell
+        }
+        return UICollectionViewCell()
+    }
 }

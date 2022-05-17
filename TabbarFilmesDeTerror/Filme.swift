@@ -14,12 +14,13 @@ class Filme {
     var nome: String
     var ano: Int
     var descricao: String
+    var maiorDeIdade: Bool
  
-    
-    init(imagem: UIImage?, nome: String, ano: Int, descricao: String) {
+    init(imagem: UIImage?, nome: String, ano: Int, descricao: String, maiorDeIdade: Bool = false) {
         self.imagem = imagem
         self.nome =  nome
         self.ano = ano
         self.descricao = descricao
+        self.maiorDeIdade = maiorDeIdade
     }
 }
