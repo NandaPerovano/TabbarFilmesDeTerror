@@ -24,6 +24,7 @@
 		336618432831972400E855D3 /* FiltroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336618422831972400E855D3 /* FiltroViewController.swift */; };
 		33661845283197AF00E855D3 /* FiltroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33661844283197AF00E855D3 /* FiltroCollectionViewCell.swift */; };
 		336618472831ABE900E855D3 /* ConfiguracaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336618462831ABE900E855D3 /* ConfiguracaoViewController.swift */; };
+		336E91B62835BB75004A29E2 /* Listagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E91B52835BB75004A29E2 /* Listagem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		336618422831972400E855D3 /* FiltroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroViewController.swift; sourceTree = "<group>"; };
 		33661844283197AF00E855D3 /* FiltroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroCollectionViewCell.swift; sourceTree = "<group>"; };
 		336618462831ABE900E855D3 /* ConfiguracaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracaoViewController.swift; sourceTree = "<group>"; };
+		336E91B52835BB75004A29E2 /* Listagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listagem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				3341B051282FC2B400EC4147 /* AppDelegate.swift */,
 				3341B053282FC2B400EC4147 /* SceneDelegate.swift */,
 				3341B055282FC2B400EC4147 /* HomeViewController.swift */,
+				336E91B52835BB75004A29E2 /* Listagem.swift */,
 				3341B057282FC2B400EC4147 /* Main.storyboard */,
 				3341B05A282FC2B500EC4147 /* Assets.xcassets */,
 				3341B05C282FC2B500EC4147 /* LaunchScreen.storyboard */,
@@ -176,6 +179,7 @@
 				3341B056282FC2B400EC4147 /* HomeViewController.swift in Sources */,
 				3366183F28314EA700E855D3 /* Amigo.swift in Sources */,
 				336618432831972400E855D3 /* FiltroViewController.swift in Sources */,
+				336E91B62835BB75004A29E2 /* Listagem.swift in Sources */,
 				3341B052282FC2B400EC4147 /* AppDelegate.swift in Sources */,
 				3341B068283071AB00EC4147 /* BuscaViewController.swift in Sources */,
 				33661845283197AF00E855D3 /* FiltroCollectionViewCell.swift in Sources */,

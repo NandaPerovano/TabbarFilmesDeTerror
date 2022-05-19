@@ -17,33 +17,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OHF-Jj-d4m" customClass="B">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="atI-YR-xHN">
+                                <rect key="frame" x="0.0" y="44" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ers-zC-dnU"/>
+                                    <constraint firstAttribute="width" constant="300" id="dpB-8J-1BM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkY-YH-s2C">
+                                <rect key="frame" x="300" y="44" width="114" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eti-fR-USn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="buscarNome:" destination="Xhu-Ns-N6g" eventType="touchUpInside" id="y6b-6P-76G"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5DA-1O-Bo7">
+                                <rect key="frame" x="0.0" y="74" width="414" height="739"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellBusca" id="0n0-aH-YKI" customClass="BuscaTableViewCell" customModule="TabbarFilmesDeTerror" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellBusca" id="1d8-YK-2R6" customClass="BuscaTableViewCell" customModule="TabbarFilmesDeTerror" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0n0-aH-YKI" id="pTS-Ji-gb0">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1d8-YK-2R6" id="ldX-4y-AzR">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iE-7T-cVe">
-                                                    <rect key="frame" x="20" y="11" width="374" height="21.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDY-sN-Cqy">
+                                                    <rect key="frame" x="20" y="11.5" width="374" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="4iE-7T-cVe" firstAttribute="leading" secondItem="pTS-Ji-gb0" secondAttribute="leadingMargin" id="1FY-Na-b0P"/>
-                                                <constraint firstItem="4iE-7T-cVe" firstAttribute="top" secondItem="pTS-Ji-gb0" secondAttribute="topMargin" id="KYv-qz-kQb"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="4iE-7T-cVe" secondAttribute="bottom" id="mg4-IA-S8a"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="4iE-7T-cVe" secondAttribute="trailing" id="ssM-1T-UMM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vDY-sN-Cqy" secondAttribute="trailing" id="6mN-5l-OWV"/>
+                                                <constraint firstItem="vDY-sN-Cqy" firstAttribute="leading" secondItem="ldX-4y-AzR" secondAttribute="leadingMargin" id="Rq4-cH-8E2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vDY-sN-Cqy" secondAttribute="bottom" id="sUU-lI-tNG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="caracterLabel" destination="4iE-7T-cVe" id="fHF-8n-rn2"/>
+                                            <outlet property="nomeFilmeLabel" destination="vDY-sN-Cqy" id="afQ-aN-bjc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -52,15 +71,21 @@
                         <viewLayoutGuide key="safeArea" id="hvI-9X-d3X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hvI-9X-d3X" firstAttribute="trailing" secondItem="OHF-Jj-d4m" secondAttribute="trailing" id="2FC-pl-PDt"/>
-                            <constraint firstItem="OHF-Jj-d4m" firstAttribute="leading" secondItem="hvI-9X-d3X" secondAttribute="leading" id="Aln-St-gbD"/>
-                            <constraint firstItem="OHF-Jj-d4m" firstAttribute="top" secondItem="hvI-9X-d3X" secondAttribute="top" id="UqF-2D-B5v"/>
-                            <constraint firstItem="hvI-9X-d3X" firstAttribute="bottom" secondItem="OHF-Jj-d4m" secondAttribute="bottom" id="iWY-ND-Wqs"/>
+                            <constraint firstItem="5DA-1O-Bo7" firstAttribute="leading" secondItem="hvI-9X-d3X" secondAttribute="leading" id="1jU-5w-bUR"/>
+                            <constraint firstItem="RkY-YH-s2C" firstAttribute="top" secondItem="hvI-9X-d3X" secondAttribute="top" id="5gv-LY-njT"/>
+                            <constraint firstItem="hvI-9X-d3X" firstAttribute="trailing" secondItem="RkY-YH-s2C" secondAttribute="trailing" id="5st-Id-OsV"/>
+                            <constraint firstItem="hvI-9X-d3X" firstAttribute="trailing" secondItem="5DA-1O-Bo7" secondAttribute="trailing" id="9fo-3c-LhI"/>
+                            <constraint firstItem="5DA-1O-Bo7" firstAttribute="top" secondItem="atI-YR-xHN" secondAttribute="bottom" id="aab-sQ-Mfu"/>
+                            <constraint firstItem="atI-YR-xHN" firstAttribute="leading" secondItem="hvI-9X-d3X" secondAttribute="leading" id="due-qE-IRi"/>
+                            <constraint firstItem="hvI-9X-d3X" firstAttribute="bottom" secondItem="5DA-1O-Bo7" secondAttribute="bottom" id="pkC-Ld-MXe"/>
+                            <constraint firstItem="RkY-YH-s2C" firstAttribute="leading" secondItem="atI-YR-xHN" secondAttribute="trailing" id="s5K-Ve-3q4"/>
+                            <constraint firstItem="atI-YR-xHN" firstAttribute="top" secondItem="hvI-9X-d3X" secondAttribute="top" id="ylE-dG-NFm"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Busca" id="PiT-rP-AhT"/>
                     <connections>
-                        <outlet property="buscaTableView" destination="OHF-Jj-d4m" id="S5h-Ua-75A"/>
+                        <outlet property="buscaTableView" destination="5DA-1O-Bo7" id="0G4-11-b6z"/>
+                        <outlet property="nomeFilmeTextField" destination="atI-YR-xHN" id="N7r-Bd-SAV"/>
                         <segue destination="4w2-N4-x3C" kind="presentation" identifier="detalhesFilmes" id="8jT-Ll-Isd"/>
                     </connections>
                 </viewController>

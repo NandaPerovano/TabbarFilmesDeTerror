@@ -9,9 +9,10 @@ import UIKit
 
 class BuscaTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var caracterLabel: UILabel!
-
+    
+    @IBOutlet weak var nomeFilmeLabel: UILabel!
+    
 func customizaCell(nome: String) {
-    caracterLabel.text = nome
+    nomeFilmeLabel.text = nome
 }
 }
