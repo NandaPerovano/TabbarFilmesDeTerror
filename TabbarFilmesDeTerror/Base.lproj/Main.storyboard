@@ -17,28 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="atI-YR-xHN">
-                                <rect key="frame" x="0.0" y="44" width="300" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Ers-zC-dnU"/>
-                                    <constraint firstAttribute="width" constant="300" id="dpB-8J-1BM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkY-YH-s2C">
-                                <rect key="frame" x="300" y="44" width="114" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="eti-fR-USn"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="buscarNome:" destination="Xhu-Ns-N6g" eventType="touchUpInside" id="y6b-6P-76G"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5DA-1O-Bo7">
-                                <rect key="frame" x="0.0" y="74" width="414" height="739"/>
+                                <rect key="frame" x="0.0" y="81" width="414" height="732"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellBusca" id="1d8-YK-2R6" customClass="BuscaTableViewCell" customModule="TabbarFilmesDeTerror" customModuleProvider="target">
@@ -67,31 +47,33 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="69g-6T-Pty">
+                                <rect key="frame" x="0.0" y="30" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hvI-9X-d3X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5DA-1O-Bo7" firstAttribute="leading" secondItem="hvI-9X-d3X" secondAttribute="leading" id="1jU-5w-bUR"/>
-                            <constraint firstItem="RkY-YH-s2C" firstAttribute="top" secondItem="hvI-9X-d3X" secondAttribute="top" id="5gv-LY-njT"/>
-                            <constraint firstItem="hvI-9X-d3X" firstAttribute="trailing" secondItem="RkY-YH-s2C" secondAttribute="trailing" id="5st-Id-OsV"/>
                             <constraint firstItem="hvI-9X-d3X" firstAttribute="trailing" secondItem="5DA-1O-Bo7" secondAttribute="trailing" id="9fo-3c-LhI"/>
-                            <constraint firstItem="5DA-1O-Bo7" firstAttribute="top" secondItem="atI-YR-xHN" secondAttribute="bottom" id="aab-sQ-Mfu"/>
-                            <constraint firstItem="atI-YR-xHN" firstAttribute="leading" secondItem="hvI-9X-d3X" secondAttribute="leading" id="due-qE-IRi"/>
+                            <constraint firstItem="69g-6T-Pty" firstAttribute="leading" secondItem="hvI-9X-d3X" secondAttribute="leading" id="9w6-6L-nBM"/>
+                            <constraint firstItem="69g-6T-Pty" firstAttribute="trailing" secondItem="hvI-9X-d3X" secondAttribute="trailing" id="JLV-Pe-gE9"/>
+                            <constraint firstItem="69g-6T-Pty" firstAttribute="top" secondItem="Zw3-mj-uaC" secondAttribute="top" constant="30" id="Mi6-6B-agz"/>
                             <constraint firstItem="hvI-9X-d3X" firstAttribute="bottom" secondItem="5DA-1O-Bo7" secondAttribute="bottom" id="pkC-Ld-MXe"/>
-                            <constraint firstItem="RkY-YH-s2C" firstAttribute="leading" secondItem="atI-YR-xHN" secondAttribute="trailing" id="s5K-Ve-3q4"/>
-                            <constraint firstItem="atI-YR-xHN" firstAttribute="top" secondItem="hvI-9X-d3X" secondAttribute="top" id="ylE-dG-NFm"/>
+                            <constraint firstItem="5DA-1O-Bo7" firstAttribute="top" secondItem="69g-6T-Pty" secondAttribute="bottom" id="rnG-Nn-xbl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Busca" id="PiT-rP-AhT"/>
                     <connections>
                         <outlet property="buscaTableView" destination="5DA-1O-Bo7" id="0G4-11-b6z"/>
-                        <outlet property="nomeFilmeTextField" destination="atI-YR-xHN" id="N7r-Bd-SAV"/>
+                        <outlet property="searchBar" destination="69g-6T-Pty" id="QYO-gq-9MH"/>
                         <segue destination="4w2-N4-x3C" kind="presentation" identifier="detalhesFilmes" id="8jT-Ll-Isd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ba8-aC-aNJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="511" y="163"/>
+            <point key="canvasLocation" x="1048" y="35"/>
         </scene>
         <!--Filtro-->
         <scene sceneID="a7a-9O-Kaj">
@@ -399,10 +381,16 @@
                             <constraint firstItem="0Re-DG-rjA" firstAttribute="top" secondItem="ZgN-JN-V0A" secondAttribute="bottom" constant="10" id="wTz-4x-jJ1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="anoLabelModal" destination="qr6-KL-vPH" id="2Ji-ch-Hga"/>
+                        <outlet property="descricaoLabelModal" destination="ZgN-JN-V0A" id="RKj-Mm-CuR"/>
+                        <outlet property="imagemModal" destination="EKo-bE-RTq" id="l61-zy-Kb1"/>
+                        <outlet property="nomeLabelModal" destination="a0g-SU-6Rb" id="r0M-Bd-tri"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dge-13-OlK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1206" y="168"/>
+            <point key="canvasLocation" x="2704" y="35"/>
         </scene>
         <!--Home-->
         <scene sceneID="WEf-Nf-Klh">
@@ -478,7 +466,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uZ-Ld-456" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="510.14492753623193" y="-444.64285714285711"/>
+            <point key="canvasLocation" x="1049" y="-772"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eEB-Dv-AYZ">

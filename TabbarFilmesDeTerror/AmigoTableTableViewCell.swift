@@ -15,6 +15,5 @@ class AmigoTableTableViewCell: UITableViewCell {
     func customizarCelulaAmigo(imagem: UIImage?, nome: String) {
         imagemAmigo.image = imagem
         nomeAmigoLabel.text = nome
-    }
-    
+    }    
 }

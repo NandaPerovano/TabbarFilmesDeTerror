@@ -21,7 +21,7 @@ class ConfiguracaoViewController: UIViewController {
         super.viewDidLoad()
         pickerView.dataSource = self
         pickerView.delegate = self
-        proximaDataLabel.text = "Pretende assistir o próximo filme dia:"
+        proximaDataLabel.text = " Data da próxima sessão:"
     }
     
     @IBAction func assistirProximoFilme(_ sender: Any) {
