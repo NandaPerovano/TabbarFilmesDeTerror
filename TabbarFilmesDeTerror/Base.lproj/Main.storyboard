@@ -316,10 +316,10 @@
             </objects>
             <point key="canvasLocation" x="2118.840579710145" y="864.50892857142856"/>
         </scene>
-        <!--Modal View Controller-->
+        <!--Filme Detalhes View Controller-->
         <scene sceneID="zWt-sp-ORe">
             <objects>
-                <viewController id="4w2-N4-x3C" customClass="ModalViewController" customModule="TabbarFilmesDeTerror" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4w2-N4-x3C" customClass="FilmeDetalhesViewController" customModule="TabbarFilmesDeTerror" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e70-E9-zEx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -342,7 +342,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgN-JN-V0A">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgN-JN-V0A">
                                 <rect key="frame" x="10" y="394.5" width="394" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Xx0-XE-2eP"/>
@@ -382,15 +382,15 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="anoLabelModal" destination="qr6-KL-vPH" id="2Ji-ch-Hga"/>
-                        <outlet property="descricaoLabelModal" destination="ZgN-JN-V0A" id="RKj-Mm-CuR"/>
-                        <outlet property="imagemModal" destination="EKo-bE-RTq" id="l61-zy-Kb1"/>
-                        <outlet property="nomeLabelModal" destination="a0g-SU-6Rb" id="r0M-Bd-tri"/>
+                        <outlet property="anoFilmeLabel" destination="qr6-KL-vPH" id="nmf-zX-ScQ"/>
+                        <outlet property="descricaoFilmeLabel" destination="ZgN-JN-V0A" id="MMd-62-XlO"/>
+                        <outlet property="imagemFilme" destination="EKo-bE-RTq" id="Hee-SY-MVJ"/>
+                        <outlet property="nomeFilmeLabel" destination="a0g-SU-6Rb" id="1dx-Uy-UsG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dge-13-OlK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2704" y="35"/>
+            <point key="canvasLocation" x="2154" y="50"/>
         </scene>
         <!--Home-->
         <scene sceneID="WEf-Nf-Klh">

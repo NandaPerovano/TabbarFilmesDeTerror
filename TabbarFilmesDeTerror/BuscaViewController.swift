@@ -18,9 +18,20 @@ class BuscaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buscaTableView.dataSource = self
-        //buscaTableView.delegate = self
+        buscaTableView.delegate = self
         searchBar.delegate = self
         filtraFilmes = listaFilmes.addFilmes
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "detalhesFilmes" {
+            if let indexPath = buscaTableView.indexPathForSelectedRow {
+                let filmeSelecionado = filtraFilmes[indexPath.row]
+                let viewControllerDestino = segue.destination as! FilmeDetalhesViewController
+                viewControllerDestino.filme = filmeSelecionado
+            }
+        }
     }
 }
 
@@ -40,23 +51,14 @@ extension BuscaViewController: UITableViewDataSource {
         return UITableViewCell()
     }
 }
-//extension BuscaViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "detalhesFilmes", sender: listaFilmes.addFilmes[indexPath.row])
-//    }
-//}
 
-//override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//    if segue.identifier == "detalhesFilmes" {
-//        if let indexPath = buscaTableView.indexPathForSelectedRow {
-//            let filmeSelecionado = listaFilmes.addFilmes[indexPath.row]
-//            let viewControllerDestino = segue.destination as? ModalViewController
-//            viewControllerDestino.filme = filmeSelecionado
-//        }
-//    }
-//}
-//
+
+extension BuscaViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detalhesFilmes", sender: listaFilmes.addFilmes[indexPath.row])
+    }
+}
+
 extension BuscaViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 
@@ -66,7 +68,7 @@ extension BuscaViewController: UISearchBarDelegate {
             filtraFilmes = listaFilmes.addFilmes
         } else {
             for filme in listaFilmes.addFilmes {
-                if filme.nome.contains(searchText) {  //lowercased().cointains(searchText.lowercased()) {
+                if filme.nome.contains(searchText) {
                     filtraFilmes.append(filme)
                 }
             }
@@ -74,5 +76,5 @@ extension BuscaViewController: UISearchBarDelegate {
         self.buscaTableView.reloadData()
     }
 }
-//}
+
 

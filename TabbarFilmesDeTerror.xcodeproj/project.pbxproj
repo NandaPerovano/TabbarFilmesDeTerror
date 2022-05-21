@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33138C07283929ED00147D84 /* FilmeDetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33138C06283929ED00147D84 /* FilmeDetalhesViewController.swift */; };
 		3341B052282FC2B400EC4147 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341B051282FC2B400EC4147 /* AppDelegate.swift */; };
 		3341B054282FC2B400EC4147 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341B053282FC2B400EC4147 /* SceneDelegate.swift */; };
 		3341B056282FC2B400EC4147 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341B055282FC2B400EC4147 /* HomeViewController.swift */; };
@@ -15,7 +16,6 @@
 		3341B05E282FC2B500EC4147 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3341B05C282FC2B500EC4147 /* LaunchScreen.storyboard */; };
 		3341B066282FD8BB00EC4147 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341B065282FD8BB00EC4147 /* HomeCollectionViewCell.swift */; };
 		3341B068283071AB00EC4147 /* BuscaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341B067283071AB00EC4147 /* BuscaViewController.swift */; };
-		3341B06A28307DC500EC4147 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341B06928307DC500EC4147 /* ModalViewController.swift */; };
 		3341B06C2830854A00EC4147 /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341B06B2830854A00EC4147 /* Filme.swift */; };
 		3366183B2831348900E855D3 /* AmigoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3366183A2831348900E855D3 /* AmigoViewController.swift */; };
 		3366183D283135FB00E855D3 /* AmigoTableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3366183C283135FB00E855D3 /* AmigoTableTableViewCell.swift */; };
@@ -28,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33138C06283929ED00147D84 /* FilmeDetalhesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeDetalhesViewController.swift; sourceTree = "<group>"; };
 		3341B04E282FC2B400EC4147 /* TabbarFilmesDeTerror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbarFilmesDeTerror.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3341B051282FC2B400EC4147 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3341B053282FC2B400EC4147 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		3341B05F282FC2B500EC4147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3341B065282FD8BB00EC4147 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		3341B067283071AB00EC4147 /* BuscaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscaViewController.swift; sourceTree = "<group>"; };
-		3341B06928307DC500EC4147 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		3341B06B2830854A00EC4147 /* Filme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filme.swift; sourceTree = "<group>"; };
 		3366183A2831348900E855D3 /* AmigoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigoViewController.swift; sourceTree = "<group>"; };
 		3366183C283135FB00E855D3 /* AmigoTableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigoTableTableViewCell.swift; sourceTree = "<group>"; };
@@ -84,13 +84,13 @@
 				3341B053282FC2B400EC4147 /* SceneDelegate.swift */,
 				3341B055282FC2B400EC4147 /* HomeViewController.swift */,
 				3341B067283071AB00EC4147 /* BuscaViewController.swift */,
+				33138C06283929ED00147D84 /* FilmeDetalhesViewController.swift */,
 				336E91B52835BB75004A29E2 /* Listagem.swift */,
 				3341B057282FC2B400EC4147 /* Main.storyboard */,
 				3341B05A282FC2B500EC4147 /* Assets.xcassets */,
 				3341B05C282FC2B500EC4147 /* LaunchScreen.storyboard */,
 				3341B05F282FC2B500EC4147 /* Info.plist */,
 				3341B065282FD8BB00EC4147 /* HomeCollectionViewCell.swift */,
-				3341B06928307DC500EC4147 /* ModalViewController.swift */,
 				3341B06B2830854A00EC4147 /* Filme.swift */,
 				3366183A2831348900E855D3 /* AmigoViewController.swift */,
 				3366183C283135FB00E855D3 /* AmigoTableTableViewCell.swift */,
@@ -180,11 +180,11 @@
 				3366183F28314EA700E855D3 /* Amigo.swift in Sources */,
 				336618432831972400E855D3 /* FiltroViewController.swift in Sources */,
 				336E91B62835BB75004A29E2 /* Listagem.swift in Sources */,
+				33138C07283929ED00147D84 /* FilmeDetalhesViewController.swift in Sources */,
 				3341B052282FC2B400EC4147 /* AppDelegate.swift in Sources */,
 				3341B068283071AB00EC4147 /* BuscaViewController.swift in Sources */,
 				33661845283197AF00E855D3 /* FiltroCollectionViewCell.swift in Sources */,
 				3341B054282FC2B400EC4147 /* SceneDelegate.swift in Sources */,
-				3341B06A28307DC500EC4147 /* ModalViewController.swift in Sources */,
 				3366184128315D4F00E855D3 /* BuscaTableViewCell.swift in Sources */,
 				3366183D283135FB00E855D3 /* AmigoTableTableViewCell.swift in Sources */,
 				336618472831ABE900E855D3 /* ConfiguracaoViewController.swift in Sources */,
