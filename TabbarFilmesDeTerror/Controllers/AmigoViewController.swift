@@ -25,7 +25,18 @@ class AmigoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         amigoTableView.dataSource = self
-        //amigoTableView.delegate = self
+        amigoTableView.delegate = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "detalhesAmigosSegue" {
+            if let indexPath = amigoTableView.indexPathForSelectedRow {
+                let filmeSelecionado = amigos[indexPath.row]
+                let viewControllerDestino = segue.destination as! AmigoDetalhesViewController
+                viewControllerDestino.filme = filmeSelecionado
+            }
+        }
     }
 }
     
@@ -45,19 +56,8 @@ extension AmigoViewController: UITableViewDataSource {
 }
 // MARK: Methods
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        if segue.identifier == "amigoDetalhesSegue" {
-//            if let indexPath = amigoTableView.indexPathForSelectedRow {
-//                let filmeSelecionado = amigos[indexPath.row]
-//                let viewControllerDestino = segue.destination as! TestedeVisualizacao
-//                //viewControllerDestino.filme = filmeSelecionado
-//            }
-//        }
-//    }
-//
-//extension AmigoViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "amigoDetalhesSegue", sender: amigos[indexPath.row])
-//    }
-//}
+extension AmigoViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detalhesAmigosSegue", sender: amigos[indexPath.row])
+    }
+}

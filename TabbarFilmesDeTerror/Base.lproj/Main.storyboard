@@ -383,7 +383,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdO-eH-IjG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdO-eH-IjG">
                                 <rect key="frame" x="130" y="40" width="284" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="nWS-qu-yDa"/>
@@ -439,6 +439,10 @@
                                                 <constraint firstItem="j9a-h3-imM" firstAttribute="top" secondItem="jle-Mc-ua4" secondAttribute="bottom" constant="20" id="pmF-yJ-LO3"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagemFilme" destination="jle-Mc-ua4" id="uRt-hQ-uZV"/>
+                                            <outlet property="nomeFilmeLabel" destination="j9a-h3-imM" id="aWf-Va-qf0"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -479,7 +483,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5o0-l8-H8r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1270" y="1491"/>
+            <point key="canvasLocation" x="1269.5652173913045" y="1490.625"/>
         </scene>
         <!--Filme Detalhes View Controller-->
         <scene sceneID="zWt-sp-ORe">
