@@ -19,12 +19,16 @@
 		3341B06C2830854A00EC4147 /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3341B06B2830854A00EC4147 /* Filme.swift */; };
 		3366183B2831348900E855D3 /* AmigoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3366183A2831348900E855D3 /* AmigoViewController.swift */; };
 		3366183D283135FB00E855D3 /* AmigoTableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3366183C283135FB00E855D3 /* AmigoTableTableViewCell.swift */; };
-		3366183F28314EA700E855D3 /* Amigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3366183E28314EA700E855D3 /* Amigo.swift */; };
+		3366183F28314EA700E855D3 /* Humano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3366183E28314EA700E855D3 /* Humano.swift */; };
 		3366184128315D4F00E855D3 /* BuscaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3366184028315D4F00E855D3 /* BuscaTableViewCell.swift */; };
 		336618432831972400E855D3 /* FiltroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336618422831972400E855D3 /* FiltroViewController.swift */; };
 		33661845283197AF00E855D3 /* FiltroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33661844283197AF00E855D3 /* FiltroCollectionViewCell.swift */; };
 		336618472831ABE900E855D3 /* ConfiguracaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336618462831ABE900E855D3 /* ConfiguracaoViewController.swift */; };
-		336E91B62835BB75004A29E2 /* Listagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E91B52835BB75004A29E2 /* Listagem.swift */; };
+		336E91B62835BB75004A29E2 /* Cinemateca.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E91B52835BB75004A29E2 /* Cinemateca.swift */; };
+		33C275FE283A4071002C048D /* FilmesFavoritos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C275FD283A4071002C048D /* FilmesFavoritos.swift */; };
+		33C27600283A446A002C048D /* AmigoDetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C275FF283A446A002C048D /* AmigoDetalhesViewController.swift */; };
+		33C27602283A49DC002C048D /* AmigoDetalheFilmeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27601283A49DC002C048D /* AmigoDetalheFilmeCollectionViewCell.swift */; };
+		33C27604283A8353002C048D /* TestedeVisualizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C27603283A8353002C048D /* TestedeVisualizacao.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,12 +46,16 @@
 		3341B06B2830854A00EC4147 /* Filme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filme.swift; sourceTree = "<group>"; };
 		3366183A2831348900E855D3 /* AmigoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigoViewController.swift; sourceTree = "<group>"; };
 		3366183C283135FB00E855D3 /* AmigoTableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigoTableTableViewCell.swift; sourceTree = "<group>"; };
-		3366183E28314EA700E855D3 /* Amigo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amigo.swift; sourceTree = "<group>"; };
+		3366183E28314EA700E855D3 /* Humano.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Humano.swift; sourceTree = "<group>"; };
 		3366184028315D4F00E855D3 /* BuscaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscaTableViewCell.swift; sourceTree = "<group>"; };
 		336618422831972400E855D3 /* FiltroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroViewController.swift; sourceTree = "<group>"; };
 		33661844283197AF00E855D3 /* FiltroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroCollectionViewCell.swift; sourceTree = "<group>"; };
 		336618462831ABE900E855D3 /* ConfiguracaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracaoViewController.swift; sourceTree = "<group>"; };
-		336E91B52835BB75004A29E2 /* Listagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listagem.swift; sourceTree = "<group>"; };
+		336E91B52835BB75004A29E2 /* Cinemateca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinemateca.swift; sourceTree = "<group>"; };
+		33C275FD283A4071002C048D /* FilmesFavoritos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmesFavoritos.swift; sourceTree = "<group>"; };
+		33C275FF283A446A002C048D /* AmigoDetalhesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigoDetalhesViewController.swift; sourceTree = "<group>"; };
+		33C27601283A49DC002C048D /* AmigoDetalheFilmeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigoDetalheFilmeCollectionViewCell.swift; sourceTree = "<group>"; };
+		33C27603283A8353002C048D /* TestedeVisualizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestedeVisualizacao.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,23 +90,27 @@
 			children = (
 				3341B051282FC2B400EC4147 /* AppDelegate.swift */,
 				3341B053282FC2B400EC4147 /* SceneDelegate.swift */,
+				33C27603283A8353002C048D /* TestedeVisualizacao.swift */,
 				3341B055282FC2B400EC4147 /* HomeViewController.swift */,
 				3341B067283071AB00EC4147 /* BuscaViewController.swift */,
+				336618422831972400E855D3 /* FiltroViewController.swift */,
+				3366183A2831348900E855D3 /* AmigoViewController.swift */,
+				336618462831ABE900E855D3 /* ConfiguracaoViewController.swift */,
+				33C275FF283A446A002C048D /* AmigoDetalhesViewController.swift */,
 				33138C06283929ED00147D84 /* FilmeDetalhesViewController.swift */,
-				336E91B52835BB75004A29E2 /* Listagem.swift */,
+				3341B06B2830854A00EC4147 /* Filme.swift */,
+				3366183E28314EA700E855D3 /* Humano.swift */,
+				3341B065282FD8BB00EC4147 /* HomeCollectionViewCell.swift */,
+				3366184028315D4F00E855D3 /* BuscaTableViewCell.swift */,
+				33661844283197AF00E855D3 /* FiltroCollectionViewCell.swift */,
+				336E91B52835BB75004A29E2 /* Cinemateca.swift */,
+				33C275FD283A4071002C048D /* FilmesFavoritos.swift */,
 				3341B057282FC2B400EC4147 /* Main.storyboard */,
 				3341B05A282FC2B500EC4147 /* Assets.xcassets */,
 				3341B05C282FC2B500EC4147 /* LaunchScreen.storyboard */,
 				3341B05F282FC2B500EC4147 /* Info.plist */,
-				3341B065282FD8BB00EC4147 /* HomeCollectionViewCell.swift */,
-				3341B06B2830854A00EC4147 /* Filme.swift */,
-				3366183A2831348900E855D3 /* AmigoViewController.swift */,
 				3366183C283135FB00E855D3 /* AmigoTableTableViewCell.swift */,
-				3366183E28314EA700E855D3 /* Amigo.swift */,
-				3366184028315D4F00E855D3 /* BuscaTableViewCell.swift */,
-				336618422831972400E855D3 /* FiltroViewController.swift */,
-				33661844283197AF00E855D3 /* FiltroCollectionViewCell.swift */,
-				336618462831ABE900E855D3 /* ConfiguracaoViewController.swift */,
+				33C27601283A49DC002C048D /* AmigoDetalheFilmeCollectionViewCell.swift */,
 			);
 			path = TabbarFilmesDeTerror;
 			sourceTree = "<group>";
@@ -176,15 +188,19 @@
 			files = (
 				3366183B2831348900E855D3 /* AmigoViewController.swift in Sources */,
 				3341B06C2830854A00EC4147 /* Filme.swift in Sources */,
+				33C27602283A49DC002C048D /* AmigoDetalheFilmeCollectionViewCell.swift in Sources */,
+				33C27600283A446A002C048D /* AmigoDetalhesViewController.swift in Sources */,
 				3341B056282FC2B400EC4147 /* HomeViewController.swift in Sources */,
-				3366183F28314EA700E855D3 /* Amigo.swift in Sources */,
+				3366183F28314EA700E855D3 /* Humano.swift in Sources */,
 				336618432831972400E855D3 /* FiltroViewController.swift in Sources */,
-				336E91B62835BB75004A29E2 /* Listagem.swift in Sources */,
+				33C275FE283A4071002C048D /* FilmesFavoritos.swift in Sources */,
+				336E91B62835BB75004A29E2 /* Cinemateca.swift in Sources */,
 				33138C07283929ED00147D84 /* FilmeDetalhesViewController.swift in Sources */,
 				3341B052282FC2B400EC4147 /* AppDelegate.swift in Sources */,
 				3341B068283071AB00EC4147 /* BuscaViewController.swift in Sources */,
 				33661845283197AF00E855D3 /* FiltroCollectionViewCell.swift in Sources */,
 				3341B054282FC2B400EC4147 /* SceneDelegate.swift in Sources */,
+				33C27604283A8353002C048D /* TestedeVisualizacao.swift in Sources */,
 				3366184128315D4F00E855D3 /* BuscaTableViewCell.swift in Sources */,
 				3366183D283135FB00E855D3 /* AmigoTableTableViewCell.swift in Sources */,
 				336618472831ABE900E855D3 /* ConfiguracaoViewController.swift in Sources */,

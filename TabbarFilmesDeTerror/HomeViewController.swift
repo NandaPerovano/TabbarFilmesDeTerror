@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    private var listagem = Listagem()
+    private var listagem = Cinemateca()
     
     @IBOutlet weak var filmesDeTerrorCollectionView: UICollectionView!
     

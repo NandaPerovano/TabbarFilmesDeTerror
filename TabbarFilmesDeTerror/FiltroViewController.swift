@@ -13,7 +13,7 @@ class FiltroViewController: UIViewController {
     @IBOutlet weak var filtroCollectionView: UICollectionView!
     
     var listaFilmesFiltro:[Filme] = []
-    var listaFilmes = Listagem()
+    var listaFilmes = Cinemateca()
     
     override func viewDidLoad() {
         super.viewDidLoad()

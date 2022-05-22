@@ -7,7 +7,7 @@
 
 import UIKit
 
-public struct Listagem {
+public struct Cinemateca {
     
     var addFilmes:[Filme] = [
         Filme(imagem: UIImage(named: "panicoImagem"), nome: "Pânico", ano: 1996, descricao: "Sidney relaciona a morte de dois estudantes com a de sua mãe, há cerca de um ano, por um maníaco na cidade", maiorDeIdade: false),
@@ -32,3 +32,4 @@ public struct Listagem {
         Filme(imagem: UIImage(named: "escapeRoomImagem"), nome: "Escape Room", ano: 2019, descricao: "Seis estranhos são convidados para um experimento inusitado: trancados em uma sala enigmática", maiorDeIdade: false)
     ]
 }
+

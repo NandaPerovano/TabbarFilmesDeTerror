@@ -12,8 +12,10 @@ class BuscaViewController: UIViewController {
     @IBOutlet weak var buscaTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var listaFilmes = Listagem()
+    var listaFilmes = Cinemateca()
     var filtraFilmes: [Filme] = []
+    
+    var galo: Filme!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,6 @@ class BuscaViewController: UIViewController {
     }
 }
 
-
 extension BuscaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filtraFilmes.count
@@ -51,7 +52,6 @@ extension BuscaViewController: UITableViewDataSource {
         return UITableViewCell()
     }
 }
-
 
 extension BuscaViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
