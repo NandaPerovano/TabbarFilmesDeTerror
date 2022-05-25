@@ -16,6 +16,6 @@ class FiltroCollectionViewCell: UICollectionViewCell {
         imagemFiltro.image = imagem
         nomeFiltroLabel.text = nome
     }
-    }
+}
 
 

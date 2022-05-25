@@ -17,6 +17,4 @@ class DetalheAmigoCollectionViewCell: UICollectionViewCell {
         imagemFilme.image = imagem
         nomeFilmeLabel.text = nome
     }
- 
-    
 }

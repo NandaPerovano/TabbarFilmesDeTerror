@@ -26,7 +26,7 @@ class BuscaViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        
         if segue.identifier == "detalhesFilmes" {
             if let indexPath = buscaTableView.indexPathForSelectedRow {
                 let filmeSelecionado = filtraFilmes[indexPath.row]
@@ -61,9 +61,9 @@ extension BuscaViewController: UITableViewDelegate {
 
 extension BuscaViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-
+        
         filtraFilmes = []
-
+        
         if searchText == "" {
             filtraFilmes = listaFilmes.addFilmes
         } else {

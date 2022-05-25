@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       filmesDeTerrorCollectionView.dataSource = self
+        filmesDeTerrorCollectionView.dataSource = self
     }
 }
 
@@ -29,7 +29,7 @@ extension HomeViewController: UICollectionViewDataSource {
             let listaDeFilmes = listagem.addFilmes[indexPath.row]
             cell.customizarCelula(imagem: listaDeFilmes.imagem, nome: listaDeFilmes.nome)
             return cell
+        }
+        return UICollectionViewCell()
     }
-    return UICollectionViewCell()
-}
 }

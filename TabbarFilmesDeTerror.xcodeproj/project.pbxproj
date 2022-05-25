@@ -102,12 +102,12 @@
 		33C2760D283AC052002C048D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3341B055282FC2B400EC4147 /* HomeViewController.swift */,
+				3366183A2831348900E855D3 /* AmigoViewController.swift */,
 				33C275FF283A446A002C048D /* AmigoDetalhesViewController.swift */,
 				33138C06283929ED00147D84 /* FilmeDetalhesViewController.swift */,
-				3341B055282FC2B400EC4147 /* HomeViewController.swift */,
 				3341B067283071AB00EC4147 /* BuscaViewController.swift */,
 				336618422831972400E855D3 /* FiltroViewController.swift */,
-				3366183A2831348900E855D3 /* AmigoViewController.swift */,
 				336618462831ABE900E855D3 /* ConfiguracaoViewController.swift */,
 			);
 			path = Controllers;

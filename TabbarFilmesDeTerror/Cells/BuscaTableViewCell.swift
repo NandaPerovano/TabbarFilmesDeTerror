@@ -8,11 +8,9 @@
 import UIKit
 
 class BuscaTableViewCell: UITableViewCell {
-
-    
     @IBOutlet weak var nomeFilmeLabel: UILabel!
     
-func customizaCell(nome: String) {
-    nomeFilmeLabel.text = nome
-}
+    func customizaCell(nome: String) {
+        nomeFilmeLabel.text = nome
+    }
 }

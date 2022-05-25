@@ -8,7 +8,7 @@
 import UIKit
 
 class ConfiguracaoViewController: UIViewController {
-
+    
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var pickerViewHumor: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!

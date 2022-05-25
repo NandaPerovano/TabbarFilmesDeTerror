@@ -8,14 +8,13 @@
 import Foundation
 import UIKit
 
-
-    class Humano {
-        
-        let imagem: UIImage?
-        let nome: String
-
-        init(imagem: UIImage?, nome: String) {
-            self.imagem = imagem
-            self.nome = nome
-        }
+class Humano {
+    
+    let imagem: UIImage?
+    let nome: String
+    
+    init(imagem: UIImage?, nome: String) {
+        self.imagem = imagem
+        self.nome = nome
     }
+}
