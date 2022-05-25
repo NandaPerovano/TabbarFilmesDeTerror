@@ -322,44 +322,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqd-bL-pEG">
-                                <rect key="frame" x="0.0" y="44" width="414" height="216"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wj7-Bt-klG">
-                                <rect key="frame" x="20" y="676" width="374" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTo-lS-ifQ">
-                                <rect key="frame" x="20" y="650" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Jgg-aV-MNH">
-                                <rect key="frame" x="0.0" y="360" width="414" height="216"/>
-                                <connections>
-                                    <action selector="assistirProximoFilme:" destination="BXv-SE-5qQ" eventType="valueChanged" id="8GX-pd-nV1"/>
-                                </connections>
-                            </datePicker>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ud-vl-B9N" userLabel="contentView">
+                                <rect key="frame" x="0.0" y="24" width="414" height="789"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqd-bL-pEG" userLabel="emocoesPickerView">
+                                        <rect key="frame" x="0.0" y="20" width="414" height="216"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </pickerView>
+                                    <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Jgg-aV-MNH" userLabel="datasDatePicker">
+                                        <rect key="frame" x="0.0" y="336" width="414" height="216"/>
+                                        <connections>
+                                            <action selector="assistirProximoFilme:" destination="BXv-SE-5qQ" eventType="valueChanged" id="8GX-pd-nV1"/>
+                                        </connections>
+                                    </datePicker>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ybV-qy-cTM" userLabel="proximaDataStackView">
+                                        <rect key="frame" x="0.0" y="648.5" width="414" height="100.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proxima Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTo-lS-ifQ" userLabel="proximaDataLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wj7-Bt-klG" userLabel="datePickerLabel">
+                                                <rect key="frame" x="0.0" y="50.5" width="414" height="50"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Jgg-aV-MNH" firstAttribute="top" secondItem="fqd-bL-pEG" secondAttribute="bottom" id="ssa-Xp-eId"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G3G-KC-gDt"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wj7-Bt-klG" firstAttribute="top" secondItem="Jgg-aV-MNH" secondAttribute="bottom" constant="100" id="48x-aX-h87"/>
-                            <constraint firstItem="fqd-bL-pEG" firstAttribute="top" secondItem="G3G-KC-gDt" secondAttribute="top" id="4oG-QN-apR"/>
-                            <constraint firstItem="Jgg-aV-MNH" firstAttribute="top" secondItem="fqd-bL-pEG" secondAttribute="bottom" constant="100" id="5EU-Fu-Yh1"/>
-                            <constraint firstItem="fqd-bL-pEG" firstAttribute="trailing" secondItem="G3G-KC-gDt" secondAttribute="trailing" id="DnX-jg-DIt"/>
-                            <constraint firstItem="G3G-KC-gDt" firstAttribute="trailing" secondItem="wj7-Bt-klG" secondAttribute="trailing" constant="20" id="DyB-Cn-Qdc"/>
-                            <constraint firstItem="G3G-KC-gDt" firstAttribute="trailing" secondItem="pTo-lS-ifQ" secondAttribute="trailing" constant="20" id="WCY-4A-3e5"/>
-                            <constraint firstItem="Jgg-aV-MNH" firstAttribute="leading" secondItem="G3G-KC-gDt" secondAttribute="leading" id="aLH-xk-a7Y"/>
-                            <constraint firstItem="wj7-Bt-klG" firstAttribute="top" secondItem="pTo-lS-ifQ" secondAttribute="bottom" constant="5" id="eEU-Dk-bDR"/>
-                            <constraint firstItem="fqd-bL-pEG" firstAttribute="leading" secondItem="G3G-KC-gDt" secondAttribute="leading" id="hj6-1x-8Ka"/>
-                            <constraint firstItem="pTo-lS-ifQ" firstAttribute="leading" secondItem="G3G-KC-gDt" secondAttribute="leading" constant="20" id="mmy-Yw-EAn"/>
-                            <constraint firstItem="wj7-Bt-klG" firstAttribute="leading" secondItem="G3G-KC-gDt" secondAttribute="leading" constant="20" id="nvX-g0-sWH"/>
-                            <constraint firstItem="Jgg-aV-MNH" firstAttribute="trailing" secondItem="G3G-KC-gDt" secondAttribute="trailing" id="pxO-qq-MRU"/>
+                            <constraint firstItem="fqd-bL-pEG" firstAttribute="leading" secondItem="G3G-KC-gDt" secondAttribute="leading" id="5M8-4r-wmd"/>
+                            <constraint firstItem="G3G-KC-gDt" firstAttribute="trailing" secondItem="fqd-bL-pEG" secondAttribute="trailing" id="86Y-Ou-oW0"/>
+                            <constraint firstItem="G3G-KC-gDt" firstAttribute="bottom" secondItem="ybV-qy-cTM" secondAttribute="bottom" constant="40" id="Ahe-iE-wlD"/>
+                            <constraint firstItem="fqd-bL-pEG" firstAttribute="top" secondItem="G3G-KC-gDt" secondAttribute="top" id="YWJ-Op-TEW"/>
+                            <constraint firstItem="G3G-KC-gDt" firstAttribute="trailing" secondItem="ybV-qy-cTM" secondAttribute="trailing" id="iqx-5y-Rgs"/>
+                            <constraint firstItem="ybV-qy-cTM" firstAttribute="leading" secondItem="G3G-KC-gDt" secondAttribute="leading" id="lX4-hU-F9T"/>
+                            <constraint firstItem="Jgg-aV-MNH" firstAttribute="leading" secondItem="G3G-KC-gDt" secondAttribute="leading" id="wJC-YB-zDX"/>
+                            <constraint firstItem="G3G-KC-gDt" firstAttribute="trailing" secondItem="Jgg-aV-MNH" secondAttribute="trailing" id="wc2-7Z-zDO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Confiigurações" image="play.fill" catalog="system" id="PPU-KA-3Qg"/>
@@ -594,9 +605,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
